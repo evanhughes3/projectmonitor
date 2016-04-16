@@ -19,4 +19,5 @@ class TravisProProject < TravisProject
     super.tap { |payload| payload.is_travis_pro = true }
   end
 
+  alias_method :webhook_payload, :fetch_payload
 end

@@ -9,10 +9,7 @@ class CircleCiPayload < Payload
   end
 
   def convert_content!(raw_content)
-    json_content = JSON.parse(raw_content)
-    Array.wrap(json_content['payload'])
-  rescue => e
-    handle_processing_exception e
+    convert_json_content!(raw_content)
   end
 
   def parse_success(content)

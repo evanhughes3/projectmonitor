@@ -14,4 +14,8 @@ class TeamCityProject < Project
     LegacyTeamCityXmlPayload.new
   end
 
+  def webhook_payload
+    LegacyTeamCityXmlPayload.new
+  end
+
 end

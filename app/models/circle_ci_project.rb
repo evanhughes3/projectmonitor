@@ -16,8 +16,6 @@ class CircleCiProject < Project
     CircleCiPayload.new
   end
 
-  alias_method :webhook_payload, :fetch_payload
-
   def accept_mime_types
     'application/json'
   end
